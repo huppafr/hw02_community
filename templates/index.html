@@ -7,8 +7,7 @@
     <h3>
         Автор: {{ post.author }}, дата публикации: {{ post.pub_date|date:"d M Y" }}
     </h3>
-    <p>{{ post.text|linebreaksbr }}</p>
-    {% if not forloop.last %}<hr>{% endif %}
+    <p>{{ post.text|linebreaksbr }}<hr></p>
     {% endfor %}
 
 {% endblock %} 
