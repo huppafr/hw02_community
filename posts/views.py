@@ -5,6 +5,9 @@ from .models import Post, Group
 def index(request):
     posts = Post.objects.all()
     return render(request, "index.html", {"posts": posts}) 
+    
+    class Meta:
+        ordering = ['-pub_date']
 
 def group_posts(request, slug):
 
